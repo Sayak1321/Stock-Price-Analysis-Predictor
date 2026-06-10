@@ -2,11 +2,11 @@
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-red?style=for-the-badge&logo=streamlit)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-orange?style=for-the-badge&logo=pytorch)
-![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![DASHBOARD](/dashboard1.png)
+![RECENT HEADLINES](/Recent%20Headline.png)
+![MACHINE LEARNING PREDICTOR](/Machine%20Learning%20Predictor.png)
+![PHASE COMPARISON SUMMARY](/Phase%20Comparision%20Summary.png)
+![BACKTESTING SANDBOX](/Backtesting%20Sandbox.png)
 
 **An end-to-end machine learning pipeline that combines financial news sentiment analysis (powered by FinBERT) with stock market data to predict next-day price direction.**
 
@@ -100,10 +100,12 @@ Stock-Price-Analysis-Predictor/
 ├── src/
 │   ├── ingestion/
 │   │   ├── news_fetcher.py        # Fetches headlines from news APIs
+│   │   ├── run_pipeline.py        
 │   │   └── stock_fetcher.py       # Downloads OHLCV data via yfinance
 │   │
 │   ├── sentiment/
-│   │   └── finbert.py             # FinBERT inference + embedding extraction
+│   │   └── finbert_analyzer.py     # FinBERT inference + embedding extraction
+│   │   └── vader_analyzer.py       # VADER inference + embedding extraction
 │   │
 │   ├── features/
 │   │   └── feature_engineering.py # RSI, MA, sentiment aggregation, feature store
