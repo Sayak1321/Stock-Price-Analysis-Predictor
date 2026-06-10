@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  stock-sentiment-analyzer:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # Map the data directory containing SQLite DB & models to the host for persistence
+      - ./data:/app/data
+      # Map the Hugging Face cache directory to avoid re-downloading the FinBERT model on restarts
+      - hf_cache:/root/.cache/huggingface
+    restart: unless-stopped
+
+volumes:
+  hf_cache:
